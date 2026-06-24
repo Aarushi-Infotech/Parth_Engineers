@@ -20,67 +20,49 @@ const stats = [
 ];
 
 const services = [
-  { 
-    title: 'Laser Cutting', 
-    description: 'Precision laser cutting for MS and SS components with high accuracy and premium finish.', 
-    icon: Sparkles, 
+  {
+    title: 'Laser Cutting',
+    description: 'Precision laser cutting for MS and SS components with high accuracy and premium finish.',
+    icon: Sparkles,
     badge: 'High Accuracy',
     color: 'from-orange-500 to-amber-500',
     glowColor: 'group-hover:shadow-[0_0_30px_rgba(255,107,0,0.2)]',
     category: 'cutting-forming',
     features: ['Up to 20mm MS / 12mm SS', 'Micron-level edge tolerance', 'Automatic nested layout yield']
   },
-  { 
-    title: 'Sheet Metal Processing', 
-    description: 'Sheet metal manufacturing for industrial applications with durable quality and exact bending.', 
-    icon: Layers, 
-    badge: 'Reliable Bending',
-    color: 'from-blue-500 to-cyan-500',
-    glowColor: 'group-hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]',
-    category: 'cutting-forming',
-    features: ['150 Tons press capacity', 'Repeatable bend profiles', 'Custom punching options']
-  },
-  { 
-    title: 'Machine Assembly', 
-    description: 'Structured assembly services with strict engineering quality checks and compliance.', 
-    icon: Warehouse, 
-    badge: 'System Ready',
-    color: 'from-emerald-500 to-teal-500',
-    glowColor: 'group-hover:shadow-[0_0_30px_rgba(16,185,129,0.2)]',
-    category: 'fab-assembly',
-    features: ['Sub-assembly integration', 'Wiring & mechanical fitment', 'Operational checklist audit']
-  },
-  { 
-    title: 'Custom Manufacturing', 
-    description: 'Custom assemblies built from customer drawings and exact specifications.', 
-    icon: Target, 
-    badge: 'Drawing Special',
-    color: 'from-indigo-500 to-purple-500',
-    glowColor: 'group-hover:shadow-[0_0_30px_rgba(99,102,241,0.2)]',
-    category: 'fab-assembly',
-    features: ['DFM capability reviews', 'Batch scale flexibility', 'Bespoke mounting jigs']
-  },
-  { 
-    title: 'Precision Engineering', 
-    description: 'Engineered solutions for demanding industrial manufacturing needs and tight tolerances.', 
-    icon: ClipboardCheck, 
+  {
+    title: 'Precision Engineering',
+    description: 'Engineered solutions for demanding industrial manufacturing needs and tight tolerances.',
+    icon: ClipboardCheck,
     badge: 'Traceable Quality',
     color: 'from-rose-500 to-pink-500',
     glowColor: 'group-hover:shadow-[0_0_30px_rgba(244,63,94,0.2)]',
     category: 'design-inspection',
     features: ['Tolerances down to ±0.05mm', 'CAD file compliance verification', 'Quality test reports']
   },
-  { 
-    title: 'Welding & Fabrication', 
-    description: 'Fabrication and welding support for finished assemblies and heavy-duty components.', 
-    icon: Wrench, 
-    badge: 'Heavy Duty',
-    color: 'from-yellow-500 to-amber-600',
-    glowColor: 'group-hover:shadow-[0_0_30px_rgba(245,158,11,0.2)]',
+  {
+    title: 'Sheet Metal Processing',
+    description: 'Sheet metal manufacturing for industrial applications with durable quality and exact bending.',
+    icon: Layers,
+    badge: 'Reliable Bending',
+    color: 'from-blue-500 to-cyan-500',
+    glowColor: 'group-hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]',
+    category: 'cutting-forming',
+    features: ['150 Tons press capacity', 'Repeatable bend profiles', 'Custom punching options']
+  },
+  {
+    title: 'Machine Assembly',
+    description: 'Structured assembly services with strict engineering quality checks and compliance.',
+    icon: Warehouse,
+    badge: 'System Ready',
+    color: 'from-emerald-500 to-teal-500',
+    glowColor: 'group-hover:shadow-[0_0_30px_rgba(16,185,129,0.2)]',
     category: 'fab-assembly',
-    features: ['Certified MIG / TIG welds', 'Structural load testing', 'Anti-corrosion prep coating']
-  }
+    features: ['Sub-assembly integration', 'Wiring & mechanical fitment', 'Operational checklist audit']
+  },
 ];
+
+
 
 const machineryItems = [
   {
@@ -549,7 +531,7 @@ function Home() {
           {/* Capabilities Grid */}
           <motion.div 
             layout 
-            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
             <AnimatePresence mode="popLayout">
               {filteredServices.map((item, idx) => {

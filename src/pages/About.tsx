@@ -39,41 +39,26 @@ function About() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-        <div className="space-y-6">
+      <section className="mx-auto max-w-7xl space-y-8">
+        <div className="space-y-4 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-industrial-orange">Engineering Excellence</p>
-          <h2 className="section-heading">Our core values shape manufacturing capability and customer confidence.</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            {[
-              { title: 'Precision', copy: 'Strict tolerance control, dimensional accuracy and repeatability for every part.' },
-              { title: 'Reliability', copy: 'Consistent process control and dependable delivery across industrial orders.' },
-              { title: 'Safety', copy: 'Workplace safety, material handling protocols and methodical process checks.' },
-              { title: 'Responsiveness', copy: 'Direct communication and collaborative problem-solving with customers.' }
-            ].map((item) => (
-              <div key={item.title} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-industrial-navy">{item.title}</h3>
-                <p className="mt-3 text-slate-600">{item.copy}</p>
-              </div>
-            ))}
-          </div>
+          <h2 className="section-heading mx-auto max-w-3xl">Our core values shape manufacturing capability and customer confidence.</h2>
         </div>
-        <div className="rounded-[2rem] bg-white p-10 shadow-panel">
-          <p className="text-sm uppercase tracking-[0.24em] text-industrial-orange">Growth Journey</p>
-          <div className="mt-8 space-y-6">
-            {[
-              { year: '2008', event: 'Established with core focus on laser cutting and sheet metal fabrication.' },
-              { year: '2014', event: 'Expanded manufacturing capacity and added machine assembly lines.' },
-              { year: '2019', event: 'Introduced precision engineering solutions for multinational customers.' },
-              { year: '2025', event: 'Strengthened quality systems and material verification practices.' }
-            ].map((item) => (
-              <div key={item.year} className="flex items-start gap-4">
-                <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-3xl bg-industrial-navy text-white font-semibold">{item.year}</div>
-                <p className="text-slate-600">{item.event}</p>
-              </div>
-            ))}
-          </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { title: 'Precision', copy: 'Strict tolerance control, dimensional accuracy and repeatability for every part.' },
+            { title: 'Reliability', copy: 'Consistent process control and dependable delivery across industrial orders.' },
+            { title: 'Safety', copy: 'Workplace safety, material handling protocols and methodical process checks.' },
+            { title: 'Responsiveness', copy: 'Direct communication and collaborative problem-solving with customers.' }
+          ].map((item) => (
+            <div key={item.title} className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+              <h3 className="text-lg font-semibold text-industrial-navy">{item.title}</h3>
+              <p className="mt-3 text-slate-600">{item.copy}</p>
+            </div>
+          ))}
         </div>
       </section>
+
 
       <section className="mx-auto max-w-7xl rounded-[2rem] bg-industrial-navy px-10 py-14 text-white shadow-panel">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
